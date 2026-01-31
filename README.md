@@ -14,3 +14,7 @@ curl -X POST localhost:8080/api/announcements \
 ```
 
 uses in-memory data and a synthetic example notice. authentication, moderation, and durable storage aren't implemented yet.
+
+## Implementation details
+
+The announcement service supports an injectable clock, active-deadline filtering, withdrawal, and audience validation at the service boundary.
