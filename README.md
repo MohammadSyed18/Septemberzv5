@@ -1,7 +1,16 @@
-# Septemberzv5
+# septemberzv5
 
-A small Spring Boot service for drafting and organizing campus announcements. It validates deadlines, prevents duplicate audience/title pairs, filters notices, produces plain-text previews, fills reusable templates, expands audience policies, and recommends weekday publication dates.
+a small Spring Boot service for campus announcements. checks deadlines and duplicate title/audience pairs, fills templates, and produces text previews.
 
-Run `mvn test`, then `mvn spring-boot:run`. Create a notice with `curl -X POST localhost:8080/api/announcements -H 'Content-Type: application/json' --data @demo/announcement.json`.
+```sh
+mvn test
+mvn spring-boot:run
+```
 
-Data is in memory and the included notice is synthetic. Authentication, moderation workflows, and durable storage are not implemented yet.
+```sh
+curl -X POST localhost:8080/api/announcements \
+  -H 'Content-Type: application/json' \
+  --data @demo/announcement.json
+```
+
+uses in-memory data and a synthetic example notice. authentication, moderation, and durable storage aren't implemented yet.
