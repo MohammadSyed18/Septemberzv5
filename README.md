@@ -1,6 +1,6 @@
-# Septemberzv5
+# septemberzv5
 
-A small Spring Boot service for campus announcements. Checks deadlines and duplicate title/audience pairs, fills templates, and produces text previews.
+a small Spring Boot service for campus announcements. checks deadlines and duplicate title/audience pairs, fills templates, and produces text previews.
 
 ```sh
 mvn test
@@ -13,4 +13,4 @@ curl -X POST localhost:8080/api/announcements \
   --data @demo/announcement.json
 ```
 
-Uses in-memory data and a synthetic example notice. Authentication, moderation, and durable storage aren't implemented yet.
+uses in-memory data and a synthetic example notice. authentication, moderation, and durable storage aren't implemented yet.
